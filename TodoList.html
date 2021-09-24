@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+            background-color: rgb(99, 171, 233);
+            font-size: 22px;
+            color: blue;
+        }
+        .text{
+            padding: 60px;
+
+        }
+      
+
+    </style>
+</head>
+<body>
+    <input type="text" id="new_list_item">
+    <button onclick="addItem()">Add item</button>
+    <script type="text/javascript">
+    var listItems=['Apple','Orange','Banana'];
+    </script>
+    <script type="text/javascript">
+    function addItem(){
+        var tempItem=document.getElementById("new_list_item").value;
+        listItems.push(listItems);
+        displayList(tempItem);
+    }
+    </script>
+    <!--3. Display the list-->
+    <div id="display">
+        <h3>Your Todo:</h3>
+        <ul>
+            <script type="text/javascript">
+          listItems.forEach(displayList);
+       
+            function displayList(item){
+                document.getElementById("display").innerHTML += "<li>" +item+"</li>"
+            }
+
+            </script>
+        </ul>
+        </div>
+    
+</body>
+</html>
